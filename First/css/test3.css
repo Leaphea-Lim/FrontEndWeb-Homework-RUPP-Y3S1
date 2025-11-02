@@ -1,0 +1,47 @@
+div{
+    width: 800px;
+    height: 500px;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    
+}
+
+.bg1{
+    /* background-color: red; */
+    background-image: url(https://img.freepik.com/free-vector/damask-seamless-pattern-element-vector-classical-luxury-old-fashioned-damask-ornament-royal-victorian-seamless-texture-wallpapers-textile-wrapping-vintage-exquisite-floral-baroque-template_1217-5905.jpg?semt=ais_incoming&w=740&q=80);
+    background-size: 30%;
+    background-repeat: repeat;
+    opacity: 0.5;
+}
+
+p{
+    color: white;
+    font-family: Arial;
+    font-weight: bold;
+    
+}
+
+.bg2{
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+}
+.box1{
+    background: linear-gradient(to right, red , yellow, green, blue);
+}
+.box2{
+    background: radial-gradient(circle, red , yellow, green, blue);
+}
+.box3{
+    background: conic-gradient(red , yellow, green, blue);
+}
+.box4{
+    background: repeating-linear-gradient(45deg, red , yellow 10%, green 20%, blue 30%);
+}
+.box5{
+    background: repeating-radial-gradient(circle, red , yellow 10%, green 20%, blue 30%);
+}
+.box6{
+    background: repeating-conic-gradient(red , yellow 10%, green 20%, blue 30%);
+}

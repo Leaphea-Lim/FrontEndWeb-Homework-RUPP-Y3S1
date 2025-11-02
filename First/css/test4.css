@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: palegoldenrod;
+  padding: 6px;
+  border: 2px solid darkblue;
+  border-radius: 12px;
+
+}
+
+.item {
+  background-color: lightblue;
+  border-radius: 10px;
+  border: 2px solid darkblue;
+  padding: 20px;
+  margin: 5px;
+  width: 10%;
+  text-align: center;
+}
+
+.item1 {
+  flex: 1 0 80%; /* Spans half the container width */
+}
