@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="shortcut icon"
+      href="../image/weather-icon.png"
+      type="image/x-icon"
+    />
+    <title>Weather Wise</title>
+  </head>
+  <body>
+  <main class="main-container">
+      <section class="greeting-section">
+        <div>
+          <h1>Welcome to Weather Wise</h1>
+        </div>
+      </section>
+      <section class="container">
+        <div class="search-box">
+          <div class="title-icon">
+            <img
+              src="../image/weather-icon.png"
+              alt="Weather Icon"
+            />
+            <h2>Weather Wise</h2>
+          </div>
+
+          <!-- Search Bar -->
+          <div class="search-bar-container">
+            <input
+              type="text"
+              id="cityInput"
+              placeholder="Enter city name..."
+            />
+            <button onclick="searchWeather()">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="results-box">
+          <!-- Current Weather -->
+          <div class="weather-box" id="currentWeather">
+            Current Weather will show here...
+          </div>
+
+          <!-- Forecast -->
+          <div class="forecast-box" id="forecast">
+            5-Day Forecast will show here...
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

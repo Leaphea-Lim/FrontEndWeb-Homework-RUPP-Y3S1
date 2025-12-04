@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap");
+
+body {
+  font-family: Arial;
+  background-color: whitesmoke;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.title-icon {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.title-icon img {
+  width: 50px; /* adjust size if needed */
+  height: 50px;
+  object-fit: cover;
+}
+
+/* Blurred background layer */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.28), rgba(0, 0, 0, 0.28)),
+    url("../image/sea-sunset.webp") center/cover no-repeat;
+  filter: blur(6px) brightness(0.92);
+  transform: scale(1.03);
+  z-index: -1;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.greeting-section {
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  font-family: "Caveat", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+}
+
+.container {
+  width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.search-box {
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  border: 1px solid #e5e7eb;
+}
+
+.search-box:hover,
+.results-box:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.results-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+}
+
+/* Search Bar Styling */
+.search-bar-container {
+  position: relative;
+  margin-top: 20px;
+  width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-bar-container input {
+  width: 100%;
+  padding: 12px 45px 12px 15px;
+  border-radius: 25px;
+  border: 2px solid #e5e7eb;
+  margin-bottom: 0;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-bar-container input:focus {
+  outline: none;
+  border-color: rgb(255, 113, 136);
+  box-shadow: 0 0 0 3px rgba(255, 113, 136, 0.1);
+}
+
+.search-bar-container button {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: rgb(255, 113, 136);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.search-bar-container button:hover {
+  background: rgb(255, 163, 177);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.search-bar-container button i {
+  font-size: 16px;
+}
+
+.weather-box,
+.forecast-box {
+  background: rgb(249, 217, 222);
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.day {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgb(250, 242, 243);
+  border-radius: 6px;
+}
+
+/* small error styling for messages inside cards */
+.error {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* transient status messages inserted by JS */
+.status {
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.status-success {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #bbf7d0;
+}
+
+.status-error {
+  background: #fff1f2;
+  color: #9f1239;
+  border: 1px solid #fecaca;
+}
+
+.status-info {
+  background: #eef2ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+
+.weather-section {
+  margin-top: 20px;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+}
