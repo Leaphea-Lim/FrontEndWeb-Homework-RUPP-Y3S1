@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap");
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial;
   background-color: whitesmoke;
@@ -14,7 +20,7 @@ body {
 }
 
 .title-icon img {
-  width: 50px; /* adjust size if needed */
+  width: 50px;
   height: 50px;
   object-fit: cover;
 }
@@ -37,6 +43,7 @@ body::before {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 20px;
 }
 
 .greeting-section {
@@ -47,12 +54,14 @@ body::before {
   font-weight: 500;
   font-style: normal;
   font-size: large;
+  margin-bottom: 20px;
 }
 
 .container {
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 0;
   border-radius: 10px;
   color: black;
   display: flex;
@@ -94,9 +103,7 @@ body::before {
 .search-bar-container {
   position: relative;
   margin-top: 20px;
-  width: calc(100% - 48px);
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 }
 
 .search-bar-container input {
@@ -195,14 +202,98 @@ body::before {
   margin-top: 20px;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 900px) {
-  .container {
-    flex-direction: column;
-    width: 90%;
+/* Responsive design for tablets */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 15px;
   }
 
-  .search-box {
-    width: 100%;
+  .greeting-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    gap: 20px;
+  }
+
+  .search-box,
+  .results-box {
+    padding: 20px;
+  }
+
+  .title-icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .title-icon h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Responsive design for mobile phones */
+@media (max-width: 480px) {
+  .main-container {
+    padding: 10px;
+    justify-content: flex-start;
+    padding-top: 30px;
+  }
+
+  .greeting-section {
+    margin-bottom: 15px;
+  }
+
+  .greeting-section h1 {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    gap: 15px;
+  }
+
+  .search-box,
+  .results-box {
+    padding: 16px;
+  }
+
+  .title-icon {
+    gap: 6px;
+  }
+
+  .title-icon img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .title-icon h2 {
+    font-size: 1.1rem;
+  }
+
+  .search-bar-container {
+    margin-top: 15px;
+  }
+
+  .search-bar-container input {
+    padding: 10px 40px 10px 12px;
+    font-size: 14px;
+  }
+
+  .search-bar-container button {
+    width: 35px;
+    height: 35px;
+  }
+
+  .search-bar-container button i {
+    font-size: 14px;
+  }
+
+  .weather-box,
+  .forecast-box {
+    padding: 15px;
+  }
+
+  .day {
+    padding: 8px;
+    font-size: 14px;
   }
 }
